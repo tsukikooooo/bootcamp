@@ -8,10 +8,3 @@ public class Helloworld{
     System.out.println("hello !!");
     System.out.println("Welcome to bootcamp!!");
     //End of the program
-
-  
-
-  
-  }
-}
-
