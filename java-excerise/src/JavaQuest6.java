@@ -13,10 +13,10 @@ public class JavaQuest6 {
 
     System.out.println(first);
     System.out.println(second);
-    for ( int i = 3; i < 16; i++) {
-      int sum = first + second;
-      first = second;
-      second = sum;
+    for ( int i = 0; i < 13; i++) { // 15 - first -second
+      int sum = first + second; 
+      first = second;           
+      second = sum;             
 
     System.out.println(sum);
       }
