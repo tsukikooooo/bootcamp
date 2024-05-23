@@ -109,6 +109,10 @@ public class DemoString {
     {
       System.out.println("Yes" + x3.substring(0,3));
 
+      // *** 
+      String x6 = x3.substring(0,3); //"wel"
+      System.out.println(x6.length()); //3 
+
       //slow method
       String x4 =x3.substring(0,3);
       int l1 =x4.length();
@@ -119,6 +123,54 @@ public class DemoString {
     if (x3.charAt(0)=='w' && x3.charAt(1)=='e'&& x3.charAt(2)=='l'){
       System.out.println("Yes");
     }
+//w3 
+    // isEmpty() >> check length
+    // Empty String value > ""
+    String x7="";
+    System.out.println(x7.isEmpty()); // return T or F
+    String x8="abc";
+    System.out.println(x8.isEmpty()); 
+    
+    // isBlank()  >> check right space then length
+    String x9 ="";
+    System.out.println(x9.isBlank());//T
+    x9 = " ";
+    System.out.println(x9.isEmpty()); //F
+
+    //substring(0,3)
+    //substring(0)
+    String s10 = "hello";
+    System.out.println(s10.substring(0)); // hello , From index 0 to the end. 
+    System.out.println(s10.substring(0,3)); //hel From index(0) - to index (2) 3-1
+
+    //hello >> HELLO toUPPerCase // toLowerCase
+    System.out.println(s10.toUpperCase()); //"HELLO"
+    String s11 = "HELLO";
+    System.out.println(s11.toLowerCase()); // "hello"
+
+    // replace
+    System.out.println(s10.replace('l', 'x')); // hexxo
+    System.out.println(s10.replace("ll", "yyyy")); // can replace sting , no any limit of length
+    System.out.println(s10.replace("lll", "abc"));
+
+    //contains
+    System.out.println(s10.contains("ok"));  // False
+
+    //startsWith() check prefix
+    System.out.println(s10.startsWith("he")); // True
+
+    //endsWith()
+    System.out.println(s10.endsWith("o")); //True
+
+    //trim()  removing the space characters at the head / tail of the String (keep mid, cut space of start and end)
+    String s12 = "    Hello,     Boot camp..!!!...";
+    System.out.println(s12.trim());
+
+    String[] strings = new String[] {"hello", "abcijk", "vincent", "Hello","   HELLO  "};
+    // how many strings contains "ELL", but ignore case 
+    //"eLL" or "ell" or "ELl"
+    
+    System.out.println(String.toUpperCase[i]);
 
   }
 

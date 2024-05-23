@@ -50,51 +50,57 @@ public class DemoLoop {
         for (int i = 0; i < 9; i++) {
             if (i % 2 == 0) {
                 sum2 += i;
-                System.out.println("sum:" + sum2); //20
+                System.out.println("sum:" + sum2); // 20
             }
-        } 
-        // 8 
-        // 6 
-        // 4 
-        ///\ 2
-        for (int i = 9; i > 0; i-- ){ //    倒序 
-            if (i%2 == 0){
+        }
+        // 8
+        // 6
+        // 4
+        /// \ 2
+        for (int i = 9; i > 0; i--) { // 倒序
+            if (i % 2 == 0) {
                 System.out.println("sum3: " + i);
             }
         }
-    
+
         // break
         for (int i = 0; i < 10; i++) {
-            if (i > 7){ /// break until 7 ..
-                break;  //exit loop
-            } //main logic 最好將 break 放最頂部
+            if (i > 7) { /// break until 7 ..
+                break; // exit loop
+            } // main logic 最好將 break 放最頂部
             System.out.println(i);
         }
-     // 0
-     //1
-     //....
-     // 7 
-     for (int i=0;i<8;i++){
-        System.out.println("ABC: "+i);
-     }
-
-     // Continue
-     int total = 0;
-     for (int i = 0; i < 5; i++){
-        if (i > 3){ 
-          continue; //直上返i++ when i = 4, skip "total += i" goes to "i++" 會上返去
+        // 0
+        // 1 - 20
+        // ....
+        // 7
+        for (int i = 0; i < 8; i++) {
+            System.out.println("ABC: " + i);
         }
-        total += i; //  0 +1, 1+1, XX2+1, 3+1, 4+1
-        System.out.println("total = " + total);
 
-        // i = 0 
-        // i = 1 0+1
-        // i = 2 1+1 < i is 3 ,-------> so continue 去返i++ (dont show)
-        // i = 3 2+1 < i is 4
-        // i = 4  <<<< i > 3, continue
-        // i = 5 <<<< i > 3, continue
-        /// sum :0 + 1 + 2 + 3 = 6
-     }
-    
+        // Continue
+        int total = 0;
+        for (int i = 0; i < 5; i++) {
+            if (i > 3) {
+                continue; // 直上返i++ when i = 4, skip "total += i" goes to "i++" 會上返去
+            }
+            total += i; // 0 +1, 1+1, XX2+1, 3+1, 4+1
+            System.out.println("total = " + total);
+
+            // i = 0
+            // i = 1 0+1
+            // i = 2 1+1 < i is 3 ,-------> so continue 去返i++ (dont show)
+            // i = 3 2+1 < i is 4
+            // i = 4 <<<< i > 3, continue
+            // i = 5 <<<< i > 3, continue
+            /// sum :0 + 1 + 2 + 3 = 6
+        }
+
+        // 1 3 5 7 9 12 14 16 18 20
+        for (int i = 1; i < 21; i++) { // separe 1-10 or 11-20
+            if (i % 2 == 1 && i < 10 || (i % 2 == 0 && i > 10)) {
+                System.out.println(i + " ");
+            }
+        }
     }
 }

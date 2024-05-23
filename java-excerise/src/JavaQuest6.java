@@ -10,15 +10,18 @@ public class JavaQuest6 {
     // for loop to print first 15 numbers in Fibonacci Sequence
     int first = 1;
     int second = 1;
-
     System.out.println(first);
     System.out.println(second);
-    for ( int i = 0; i < 13; i++) { // 15 - first -second
-      int sum = first + second; 
-      first = second;           
-      second = sum;             
 
-    System.out.println(sum);
-      }
+    for (int i = 0; i < 13; i++){
+      int sum = first + second; // 1 + 2 =3
+      first = second; // first:1 >>> 2  ** new assign 
+      second = sum; // second: 2 >>>.3  ..
+                      // sum = 2 +3 >> 5 
+                      // first : 3 
+                      //second : 5 
+                      // = 3+5 = 8 
+      System.out.println(sum);
+    }
  }
 }
