@@ -1,6 +1,9 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 import javax.management.monitor.Monitor;
-//// this file got error  with unknow msg
+
+//// this file got error with unknow msg
 public class test {
   public static void main(String[] args) {
     int a = 123;
@@ -56,10 +59,17 @@ public class test {
     System.out.println(friends);
 
     Scanner input = new Scanner(System.in);
-    System.out.print("Please input a number: "); 
-    int month = input.nextInt(); //Line of input > int
-    System.out.println("month=" + month);
+    System.out.print("Please input a number: ");
+    // int month = input.nextInt(); // Line of input > int
+    // System.out.println("month=" + month);
+
+    int[] forEachtest = new int[] {124, 56, 23, 86, 45};
+    for (int fornew : forEachtest) {
+      System.out.print(fornew + " ");
+    }
+    System.out.println(Arrays.toString(forEachtest));
   }
+  
 
 }
 
