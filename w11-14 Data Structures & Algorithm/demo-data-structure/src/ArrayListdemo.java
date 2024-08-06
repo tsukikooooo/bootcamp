@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ArrayListdemo {
-    public static void main(String[] args) throws Exception {  //??? why ? throws Exception?
+    public static void main(String[] args) {  //??? why ? throws Exception?
      Integer[] integers = new Integer[] {2,10,-4};   //<< array 係最底層array, cannot know the source code
       //for each
       int sum = 0;
@@ -20,7 +20,7 @@ public class ArrayListdemo {
       
 
       //ArrayList   
-      ArrayList<Integer> intergers2 = new ArrayList<>(); //call constructor of ArrayList.class
+      ArrayList<Integer> intergers2 = new ArrayList<>(); //(): call constructor of ArrayList.class
       intergers2.add(2);  //佢寫左method , 你再call 佢
       intergers2.add(10); //can add anyline you want
       intergers2.add(-4);  // for loop , 對比array 係慢左DD 
@@ -89,12 +89,14 @@ public class ArrayListdemo {
       // Question 1: Given String[], remove those string with length <= 3
     String[] stringArray = new String[] {"anc", "a", "", null, "aaaa"};
     ArrayList<String> result = new ArrayList<>();
-    for (String s : stringArray) {
-      if (s != null && s.length() > 3) {
-        result.add(s);
+      for(String s : stringArray){
+        if (s !=null && s.length() > 3){
+          result.add(s);
+          
+        }
       }
-    }
-    System.out.println(result); // ["aaaa"]
+      System.out.println("result:" + result);
+      
 
     // Question 2: Given Person[], retrieve all customer object with age > 30 or
     // name startsWith "J"
@@ -102,15 +104,13 @@ public class ArrayListdemo {
         , new Customer(31, "John") //
         , new Customer(29, "Jason") //
         , new Customer(29, "Cindy")};
-    // loop
-    ArrayList<Customer> customerList = new ArrayList<>();
-    for (Customer c : customers) {
-      if (c.getAge() > 30
-          || (c.getName() != null && c.getName().startsWith("J"))) {
-        customerList.add(c);
-      }
-    }
-    System.out.println(customerList);
+      ArrayList<Customer> newcustomers = new ArrayList<>();
+       for (Customer a : customers){
+        if (a.getAge() > 30 || a.getName().startsWith("J")){
+          newcustomers.add(a);
+        }
+       }
+    System.out.println("newcustomers:" + newcustomers);
 
       ArrayList<Object> objects = new ArrayList<>();  //object:topclass, biggest parent
       objects.add(new String("abc"));

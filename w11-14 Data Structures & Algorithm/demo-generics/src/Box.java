@@ -37,6 +37,6 @@ public class Box<T >{ // <T> like unknown & any Type....,, primviatme 唔用得>
 //You cannot 
 // Box<T> box = new Box<>();
   Box<String> stringBox = Box.createBox("hello");
-  Box<Bird> birdBox = Box.createBox("Box");  
+  Box<Bird> birdBox = Box.createBox("Box"); //no Bird class now,  
   }
 }

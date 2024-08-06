@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class ArrayList1 {
+public class ArrayList1 { //model as ArrayList, feel the memory 
   private Integer[] integers;  // for integers only.
 
   public ArrayList1(){
@@ -25,7 +25,7 @@ public class ArrayList1 {
   }
 //remove
 
-  public void remove(int index){
+  public void remove(int index){ // remove by index 
     Integer [] arr = new Integer[this.integers.length -1];
     int ind = 0;
     for( int i = 0; i < this.integers.length; i++){
@@ -61,6 +61,8 @@ public class ArrayList1 {
 
   list.remove(1);
   System.out.println(list); // [10, -4, 100]
+
+
 }
 }
 

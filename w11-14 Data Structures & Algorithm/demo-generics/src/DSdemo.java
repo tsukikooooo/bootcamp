@@ -10,7 +10,7 @@ public class DSdemo {
     List<String> strings = new ArrayList<>();
     List<Customer> customers = new ArrayList<>();
     //ArrayList.clas has generics Design.
-    Map<String> strings2 = new HashMap<>(); //<K> <V> , 代表可以寫唔一樣
+    Map<String,Customer> strings2 = new HashMap<>(); //<K> <V> , 代表可以寫唔一樣  ...int need to write wrapper class "Integer"
 
   }
   
