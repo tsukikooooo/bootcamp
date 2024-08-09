@@ -23,7 +23,7 @@ public class Account { //無可避免的情況
    if (this.balance < amount)
     //check exception , well define, 
     // throw new IllegalArgumentException();
-      //throw new BusinessException(ErrorCode.INSUFF_BAL); //checked exception  用erum 可以唔俾人改, -99 & string  , 用家match 錯係0.
+      //throw new BusinessException(ErrorCode.INSUFF_BAL); //checked exception  用erum 就可以唔俾人改, -99 & string  , 用家match 錯係0.
     throw new InsufficientBalance(); 
 
     this.balance -= amount;
@@ -40,7 +40,7 @@ public class Account { //無可避免的情況
 //toSting : 
     System.out.println(e.codeWithMessgae()); // encap
    //error: -99-withdrawal amount > Account Balance
-  } finally { //
+  } finally { //finally block -> peform some additional cleanup
    // ..s.get nalance():
     //如果 
     System.out.println("this is a section to run no matter there is exception or not");

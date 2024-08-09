@@ -8,7 +8,7 @@ public enum Currency {
   private String description;  //not public, 唔係你NEW, JVM new的
   private int DBvalue;  //寫唔寫final都得, 因為係private 又無Set.  XXstatic
 
-  //Constructor
+  //Constructor  ** private constructor
   private Currency(String description, int DBvalue){
     this.description = description; //so HKD need to defind, (coz not empty constructor)
     this.DBvalue = DBvalue;
